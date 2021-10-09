@@ -1,7 +1,7 @@
 from os import error
 import socket
 
-TARGET_HOST = '127.0.0.1'
+TARGET_HOST = ''
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 

@@ -3,16 +3,16 @@ import socket
 import threading
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-TARGET_HOST = '137.74.187.103' # IP address only
+TARGET_HOST = ''  # IP address only
+
 
 def scan_port(start_port, end_port):
     for port in range(start_port, end_port+1):
         try:
             s.connect((TARGET_HOST, port))
-            print(f"Port {port:03d}: OPEN")
-        except error as e:
-            print(e)
-            # print(f"Port {port:03d}: close")
+            print(f"Port {port}: OPEN")
+        except:
+            print(f"Port {port}: close")
 
 
 if __name__ == '__main__':
